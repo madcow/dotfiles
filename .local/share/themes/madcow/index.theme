@@ -1,0 +1,8 @@
+[X-GNOME-Metatheme]
+Type=X-GNOME-Metatheme
+Name=Madcow
+Encoding=UTF-8
+GtkTheme=Madcow
+IconTheme=Madcow
+CursorTheme=Madcow
+CursorSize=24
