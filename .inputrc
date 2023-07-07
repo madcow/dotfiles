@@ -6,4 +6,4 @@ set match-hidden-files off
 set page-completions off
 set completion-query-items 0
 set history-size 2048
-set editing-mode vi
+set editing-mode emacs
