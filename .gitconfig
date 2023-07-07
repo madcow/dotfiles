@@ -1,13 +1,14 @@
-# .gitconfig git settings file
-# Leon Krieg <info@madcow.dev>
-
-[init]
-	defaultBranch = main
 [user]
 	name = Leon Krieg
 	email = info@madcow.dev
-	signingkey = 978970F0501073DB699F2F5E327A4F984BF5BA9B
+	signingkey = 327A4F984BF5BA9B
+[init]
+	defaultBranch = main
 [core]
-	excludesfile = $HOME/.gitignore
+	excludesFile = $HOME/.gitignore
 [commit]
 	gpgsign = true
+[alias]
+	amend = commit --amend --no-edit
+	unstage = reset HEAD --
+	last = log -1 HEAD
