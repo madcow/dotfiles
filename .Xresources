@@ -1,9 +1,10 @@
 ! General
 Xcursor.size: 14
-URxvt.font: xft:Terminus:style=Bold:pixelsize=14
+URxvt.font: -*-terminus-bold-*-normal-*-14-*-*-*-*-*-*-*
+!URxvt.font: xft:Terminus:style=Bold:pixelsize=14
 URxvt.geometry: 80x24
 URxvt.letterSpace: 0
-URxvt.lineSpace: 1
+URxvt.lineSpace: 4
 URxvt.saveline: 2048
 URxvt.scrollBar: false
 URxvt.scrollBar_right: false

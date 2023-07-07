@@ -2,12 +2,13 @@
 
 Fresh Debian XFCE install with some config tweaks.
 
-## Update font and icon cache
+## Update cache and reload X settings
 
 fc-cache ~/.local/share/fonts
 gtk-update-icon-cache -f -t ~/.icons/madcow
+xrdb ~/.Xresources
 
-## Migrate to different system
+## Migrate to new system
 
 alias dot='git --git-dir=$HOME/files/config/ --work-tree=$HOME'
 mkdir -p .config-backup && dot checkout 2>&1 | \
