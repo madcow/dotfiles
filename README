@@ -1,0 +1,26 @@
+# Dotfiles
+
+Fresh Debian XFCE install with some config tweaks.
+
+## Update font and icon cache
+
+fc-cache ~/.local/share/fonts
+gtk-update-icon-cache -f -t ~/.icons/madcow
+
+## Migrate to different system
+
+alias dot='git --git-dir=$HOME/files/config/ --work-tree=$HOME'
+mkdir -p .config-backup && dot checkout 2>&1 | \
+    egrep "\s+\." | awk {'print $1'} | \
+    xargs -I{} mv {} .config-backup/{}
+
+mkdir -p $HOME/bin $HOME/dev
+mkdir -p $HOME/files $HOME/notes $HOME/files/unsorted 
+mkdir -p $HOME/files/backup $HOME/files/config $HOME/files/desktop
+mkdir -p $HOME/files/images $HOME/files/music $HOME/files/videos
+
+mkdir -p $HOME/files/config
+echo "$HOME/files/config" >> .gitignore
+git clone --bare git@github.com:madcow/dotfiles.git $HOME/files/config
+dot config --local status.showUntrackedFiles no
+dot checkout
